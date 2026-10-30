@@ -1,0 +1,60 @@
+CREATE TABLE IF NOT EXISTS nv_settings (
+  k VARCHAR(64) NOT NULL PRIMARY KEY,
+  v TEXT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS nv_categories (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  slug VARCHAR(32) NOT NULL UNIQUE,
+  name VARCHAR(80) NOT NULL,
+  guideline VARCHAR(40) NULL,
+  sort INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS nv_items (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  category_id INT UNSIGNED NOT NULL,
+  name VARCHAR(120) NOT NULL,
+  unit ENUM('kg','l','stk') NOT NULL DEFAULT 'kg',
+  base_qty DECIMAL(10,3) NOT NULL DEFAULT 0,
+  scale ENUM('person','head','pet','fixed') NOT NULL DEFAULT 'person',
+  target_override DECIMAL(10,3) NULL,
+  pack_size DECIMAL(10,3) NULL,
+  pack_label VARCHAR(60) NULL,
+  kcal DECIMAL(7,1) NOT NULL DEFAULT 0,
+  protein DECIMAL(6,1) NOT NULL DEFAULT 0,
+  fat DECIMAL(6,1) NOT NULL DEFAULT 0,
+  carbs DECIMAL(6,1) NOT NULL DEFAULT 0,
+  shelf_months INT NOT NULL DEFAULT 0,
+  shape VARCHAR(16) NOT NULL DEFAULT 'box',
+  active TINYINT(1) NOT NULL DEFAULT 1,
+  is_custom TINYINT(1) NOT NULL DEFAULT 0,
+  note VARCHAR(255) NULL,
+  sort INT NOT NULL DEFAULT 0,
+  CONSTRAINT fk_item_cat FOREIGN KEY (category_id) REFERENCES nv_categories(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS nv_batches (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  item_id INT UNSIGNED NOT NULL,
+  qty DECIMAL(10,3) NOT NULL,
+  qty_initial DECIMAL(10,3) NOT NULL,
+  mhd DATE NULL,
+  location VARCHAR(60) NULL,
+  added_at DATETIME NOT NULL,
+  notified_stage TINYINT NOT NULL DEFAULT 0,
+  KEY idx_item (item_id),
+  KEY idx_mhd (mhd),
+  CONSTRAINT fk_batch_item FOREIGN KEY (item_id) REFERENCES nv_items(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS nv_log (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  item_id INT UNSIGNED NOT NULL,
+  type ENUM('in','out','discard') NOT NULL,
+  qty DECIMAL(10,3) NOT NULL,
+  mhd DATE NULL,
+  created_at DATETIME NOT NULL,
+  KEY idx_log_item (item_id),
+  CONSTRAINT fk_log_item FOREIGN KEY (item_id) REFERENCES nv_items(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

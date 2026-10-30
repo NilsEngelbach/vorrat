@@ -1,0 +1,9 @@
+{
+  "seedKey": "79840f40",
+  "mode": "operate",
+  "rounds": [
+    {"round": 0, "assignedIndex": 4, "assigned": "Aicher-style pictogram programme", "answer": "reroll", "steer": "maybe something like a shelf in the cellar"},
+    {"round": 1, "reroll": 1, "assignedIndex": 7, "assigned": "Regalplan (Montagezeichnung)", "answer": "assigned", "buildPath": "code"}
+  ],
+  "contractDeviation": "Board width honest to target share is realised as package counts per item, not as proportional board segments; recorded in the surface brief FIRST VIEWPORT block."
+}

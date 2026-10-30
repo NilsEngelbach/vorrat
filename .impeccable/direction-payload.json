@@ -1,0 +1,130 @@
+{
+  "title": "Notvorrat: visuelle Welt wählen",
+  "question": "The roll assigned the Aicher-style pictogram programme. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Erscheinungsbild Haushalt",
+      "kicker": "THE ROLL",
+      "lineage": "Otl Aicher's Munich '72 identity programme and its pictogram system",
+      "thesis": "The household supply as an identity programme: every food group gets a grid-built pictogram and a programme colour, with calm cheerfulness instead of the red-and-black of alarm.",
+      "palette": ["#ffffff", "#1d4f91", "#3d9bd6", "#3a9a4a", "#b9c0c6", "#ee8a1c"],
+      "materials": ["flat programme colour fields", "pictograms on a 45°/90° square grid", "Univers-like grotesk, tabular figures"],
+      "viewport": "A wall of eight food-group fields in programme colours, each with its pictogram, the Soll line and the Ist fill, plus one large 'Tage versorgt' figure and the next MHD due.",
+      "risk": "Can become a Munich '72 costume, or a generic tile grid if the grid and pictograms aren't strictly built.",
+      "raised": [
+        {"from": "challenger-labanotation", "raise": "Length is exact time: each batch's MHD bar has a length equal to its remaining days on one shared time scale, so nothing in the timeline is decorative."},
+        {"from": "challenger-ikeda", "raise": "Numbers at true density: every quantity is set in tabular figures in aligned columns, with no rounding into vague 'almost full'."},
+        {"from": "challenger-jcard", "raise": "A fixed-capacity frame: Soll is a ruled container that visibly fills; overstock is a stated state, not a silent overflow."},
+        {"from": "challenger-transit", "raise": "A strict state vocabulary for every batch: frisch · bald fällig · fällig · abgelaufen, always as words plus pictogram, never colour alone."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Lagerkarte (Kardex)",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "German office stock-card files: Bestandskarte, Zugang/Abgang/Bestand, coloured rider tabs",
+      "thesis": "Every item is a stock card in a sliding file: Zugang/Abgang/Bestand columns, and coloured rider tabs along the top edge mark the month each batch expires.",
+      "palette": ["#f2efe6", "#22303c", "#2f6f9f", "#d9a227", "#c4462e", "#5d8a3a"],
+      "materials": ["card stock with printed rules", "sliding rider tabs", "typewriter-style numerals"],
+      "viewport": "A visible card file: overlapping card edges, item names on the visible strip, riders lined up by expiry month so the next due batches stand out.",
+      "risk": "Close to the most obvious 'inventory' metaphor, and paper-office nostalgia could read dusty."
+    },
+    {
+      "id": "challenger-crouwel",
+      "label": "Gridded specimen",
+      "verdict": "competitive",
+      "lineage": "Wim Crouwel's grid-constructed type specimens",
+      "thesis": "The supply drawn on a visible construction grid: cells are units (person-days), and stock literally fills grid cells.",
+      "palette": ["#ffffff", "#9cc3e6", "#111111", "#e4322b"],
+      "materials": ["faint blue construction grid", "cell-built numerals", "neutral grotesk"],
+      "viewport": "A huge cell-built 'Tage' figure over a grid where each cell is one person-day of supply, filled or open.",
+      "case": "Holds product clarity (cells as person-days is honest), but the audience doesn't recognise it as theirs.",
+      "risk": "Becomes a type poster that obscures the shopping list.",
+      "hero": "https://impeccable.style/worlds/cards/crouwel-grid-specimen-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/crouwel-grid-specimen.webp"
+    },
+    {
+      "id": "challenger-labanotation",
+      "label": "Labanotation score",
+      "verdict": "declined",
+      "lineage": "dance notation: block length is exact duration",
+      "thesis": "Batches as shaped blocks on a vertical staff where the future sits above.",
+      "palette": ["#ffffff", "#111111", "#cfcfcf"],
+      "materials": ["score paper", "hatched blocks"],
+      "viewport": "A vertical time staff of MHD blocks.",
+      "case": "Fuses poorly: nobody in the household reads a dance score.",
+      "risk": "Opaque to anyone who is not a notator.",
+      "kept": "Length is exact time: MHD bars are drawn to scale.",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-labanotation-hero.webp"
+    },
+    {
+      "id": "challenger-ikeda",
+      "label": "Datamatics field",
+      "verdict": "declined",
+      "lineage": "Ryoji Ikeda's black-and-white data fields",
+      "thesis": "Stock as a strobing barcode field.",
+      "palette": ["#000000", "#ffffff"],
+      "materials": ["hairline bars", "monospace numerics"],
+      "viewport": "A barcode wall of batches.",
+      "case": "Loses on both axes: cold and hostile for a calm household tool.",
+      "risk": "Alarmist and unreadable on a phone.",
+      "kept": "Tabular numeric density.",
+      "hero": "https://impeccable.style/worlds/cards/ikeda-datamatics-hero.webp"
+    },
+    {
+      "id": "challenger-jcard",
+      "label": "Mixtape J-card",
+      "verdict": "declined",
+      "lineage": "hand-lettered cassette inlays timed to fill a side",
+      "thesis": "Shelves as tape sides that must fill exactly.",
+      "palette": ["#ffffff", "#1f3fa8", "#9a9a9a", "#d6322a"],
+      "materials": ["ballpoint on lined inlay"],
+      "viewport": "A folded inlay listing items.",
+      "case": "Fuses weakly: the nostalgia has nothing to do with provisions.",
+      "risk": "Costume.",
+      "kept": "Fixed capacity that visibly fills.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-cassette-j-card-hero.webp"
+    },
+    {
+      "id": "challenger-lexicon",
+      "label": "Lexicon page",
+      "verdict": "declined",
+      "lineage": "19th-century lexicon with guide words and colour plates",
+      "thesis": "The inventory as a lexicon with guide words.",
+      "palette": ["#f1e9d6", "#111111", "#c8402a"],
+      "materials": ["engraving black", "bordered plates"],
+      "viewport": "A dense text column of items.",
+      "case": "Loses on both axes for a phone-in-pantry task.",
+      "risk": "Cream-and-serif rut.",
+      "kept": "Rank by apparatus, not size (folded into batch detail).",
+      "hero": "https://impeccable.style/worlds/cards/rw-lexicon-shoulder-and-plate-hero.webp"
+    },
+    {
+      "id": "challenger-transit",
+      "label": "Transit diagram",
+      "verdict": "declined",
+      "lineage": "enamel metro maps",
+      "thesis": "Food groups as metro lines, MHD dates as stations.",
+      "palette": ["#14224a", "#ffffff", "#d8343a", "#2c5fd4", "#f0a830"],
+      "materials": ["enamel", "45° lines"],
+      "viewport": "A route diagram of expiries.",
+      "case": "Forced mapping: a pantry has no journeys.",
+      "risk": "Metaphor over task.",
+      "kept": "A strict state vocabulary.",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A clean inventory dashboard: sidebar, KPI cards, progress bars, and traffic-light expiry badges.",
+    "palette": ["#ffffff", "#111827", "#16a34a", "#f59e0b", "#dc2626"],
+    "materials": ["cards", "progress bars", "data table"],
+    "viewport": "KPI row (Tage versorgt, Artikel, bald fällig), then category progress bars and an expiry table.",
+    "risk": "Indistinguishable from any admin template."
+  },
+  "steer": true
+}

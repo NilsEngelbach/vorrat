@@ -1,0 +1,131 @@
+{
+  "title": "Notvorrat: das Kellerregal",
+  "question": "Your steer pinned the cellar shelf. The roll assigned the shelf as a technical assembly drawing. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Regalplan (Montagezeichnung)",
+      "kicker": "THE ROLL",
+      "lineage": "Furniture assembly drawings and their parts list: the cellar shelf in front elevation, line by line",
+      "thesis": "Your cellar shelf as a technical drawing: one board per food group, planned items drawn as dashed outlines, stocked items drawn solid, numbered callouts tying each item to the parts list.",
+      "palette": ["#ffffff", "#151515", "#9aa0a6", "#e8e8e3", "#ff5b14"],
+      "materials": ["uniform-weight line drawing", "hatched fill for stocked volume", "numbered callout circles", "parts-list table (Stückliste) in tabular figures"],
+      "viewport": "The full shelf in front elevation: eight boards, water crates on the floor, every item an outlined object filled to its stock level and dashed where missing; one large 'Tage versorgt' figure beside it and the parts list underneath.",
+      "risk": "The drawing must stay legible on a phone; it re-stacks board by board, and the line work has to be built strictly or it reads as clip-art.",
+      "raised": [
+        {"from": "challenger-emission", "raise": "State is line form, not hue: solid = stocked, dashed = planned, doubled = bald fällig, struck = abgelaufen. Colour only reinforces."},
+        {"from": "challenger-monochrome", "raise": "One accent, held back: the signal orange appears only where an MHD needs attention, so it is never decoration."},
+        {"from": "challenger-doujin", "raise": "Map and list are one space: every callout number on the drawing is the same row in the parts list, and hovering one lights the other."},
+        {"from": "challenger-atlas", "raise": "One fixed scale: an item's drawn fill uses the same Soll ratio everywhere (drawing, list, item page), never re-normalised per view."},
+        {"from": "challenger-acetate", "raise": "Extent is honest: each board's width share follows its share of the household's target, so big groups get big boards."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Holzregal mit Einmachgläsern",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "The wooden cellar shelf: Weck jars, orange rubber rings, masking-tape labels in marker",
+      "thesis": "A warm, photographic-feeling shelf of jars and cans with handwritten tape labels; each jar is filled to its stock level and its label carries the MHD.",
+      "palette": ["#2a2420", "#c9a77a", "#f1ece2", "#ef6c1f", "#5f7f4f"],
+      "materials": ["wood grain boards", "glass jars", "masking tape labels", "marker handwriting"],
+      "viewport": "A lit shelf front at night, jars glowing, tape labels readable, gaps where items are missing.",
+      "risk": "The most familiar rendition of the steer; handwriting and wood texture risk kitsch and slow pages."
+    },
+    {
+      "id": "challenger-gateboard",
+      "label": "Abfahrtstafel für MHD",
+      "verdict": "competitive",
+      "lineage": "Boarding pass plus a live gate board",
+      "thesis": "Batches ranked like departures by MHD; a changed date moves its row in place and stays lit until seen.",
+      "palette": ["#111418", "#f4f4f2", "#ffcc00"],
+      "materials": ["segmented passes", "fixed column board", "tabular figures"],
+      "viewport": "A departure board of the next twenty batches by MHD, with stock summary as a pass.",
+      "case": "Holds product clarity for the MHD view, but leaves the cellar shelf the user asked for.",
+      "risk": "Airport chrome in a pantry app.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-boarding-pass-and-gate-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/vernacular-ephemera-boarding-pass-and-gate-board.webp"
+    },
+    {
+      "id": "challenger-emission",
+      "label": "Emission-line rail",
+      "verdict": "declined",
+      "lineage": "glass spectrogram plates",
+      "thesis": "Everything registered to one rail, state as line height and dash.",
+      "palette": ["#2b2d30", "#e9e4d8", "#f2c230"],
+      "materials": ["charcoal continuum", "hairlines"],
+      "viewport": "One rail of MHD ticks.",
+      "case": "Loses both axes: the household does not see itself in a spectrogram.",
+      "risk": "Too abstract for a pantry.",
+      "kept": "State as line form, not hue.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-emission-line-rail-hero.webp"
+    },
+    {
+      "id": "challenger-monochrome",
+      "label": "Monochrome product page",
+      "verdict": "declined",
+      "lineage": "software marketing canon",
+      "thesis": "Neutral scale, one accent, claim plus proof.",
+      "palette": ["#fafafa", "#111111", "#4f46e5"],
+      "materials": ["screenshots", "soft gradients"],
+      "viewport": "Claim/proof pairs.",
+      "case": "A marketing form for a tool surface; no cellar.",
+      "risk": "Generic.",
+      "kept": "One accent, held back.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing-hero.webp"
+    },
+    {
+      "id": "challenger-doujin",
+      "label": "Convention catalog",
+      "verdict": "declined",
+      "lineage": "doujin event circle catalogs",
+      "thesis": "Thumbnail grid keyed to a hall map.",
+      "palette": ["#e7e4dc", "#1a1a1a", "#3a7bd5"],
+      "materials": ["newsprint", "biro circles"],
+      "viewport": "Packed cell grid.",
+      "case": "Fuses partly (map = list) but the aesthetic is foreign to the household.",
+      "risk": "Noise.",
+      "kept": "Map and list are one space.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog-hero.webp"
+    },
+    {
+      "id": "challenger-atlas",
+      "label": "Star atlas",
+      "verdict": "declined",
+      "lineage": "celestial charts",
+      "thesis": "Magnitudes as ranked dots on a navy chart.",
+      "palette": ["#0f1b3d", "#f5f3ea", "#d9472b"],
+      "materials": ["chart grid", "dots"],
+      "viewport": "A sky of batches.",
+      "case": "Loses both axes.",
+      "risk": "Poetic, not useful.",
+      "kept": "One fixed scale across views.",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-star-atlas-hero.webp"
+    },
+    {
+      "id": "challenger-acetate",
+      "label": "Acetate tab manual",
+      "verdict": "declined",
+      "lineage": "boxed-software manuals with tab dividers",
+      "thesis": "Tab rail sized by extent, acetate leaves over coloured boards.",
+      "palette": ["#e8582a", "#f2c21b", "#3c9a4a", "#2b4bb3"],
+      "materials": ["acetate", "divider boards"],
+      "viewport": "Tabbed manual spread.",
+      "case": "Loses both axes against the shelf.",
+      "risk": "Heavy for small screens.",
+      "kept": "Extent is honest.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A clean inventory dashboard: sidebar, KPI cards, progress bars, and traffic-light expiry badges.",
+    "palette": ["#ffffff", "#111827", "#16a34a", "#f59e0b", "#dc2626"],
+    "materials": ["cards", "progress bars", "data table"],
+    "viewport": "KPI row (Tage versorgt, Artikel, bald fällig), then category progress bars and an expiry table.",
+    "risk": "Indistinguishable from any admin template."
+  },
+  "steer": true
+}

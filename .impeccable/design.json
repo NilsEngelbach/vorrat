@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T12:00:00Z",
+  "title": "Design System: Notvorrat",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Drawing Paper", "canonical": "#fcfcfa", "tonalRamp": ["#262624", "#3f3f3c", "#5b5b57", "#7a7a75", "#9a9a95", "#bdbdb8", "#e0e0dc", "#fcfcfa"] },
+      "paper-2": { "role": "neutral", "displayName": "Tracing Paper", "canonical": "#f2f2ee", "tonalRamp": ["#262622", "#3f3f3a", "#5b5b55", "#7a7a73", "#9a9a93", "#bcbcb6", "#dcdcd7", "#f2f2ee"] },
+      "white": { "role": "neutral", "displayName": "Field White", "canonical": "#ffffff", "tonalRamp": ["#262626", "#3f3f3f", "#5c5c5c", "#7b7b7b", "#9c9c9c", "#bfbfbf", "#e2e2e2", "#ffffff"] },
+      "ink": { "role": "primary", "displayName": "Drafting Ink", "canonical": "#151515", "tonalRamp": ["#151515", "#2f2f2d", "#4a4a48", "#686866", "#8a8a88", "#adadab", "#d2d2d0", "#f2f2f0"] },
+      "ink-2": { "role": "neutral", "displayName": "Graphite", "canonical": "#4f555c", "tonalRamp": ["#1d2023", "#30353a", "#4f555c", "#6a7179", "#878e96", "#a6acb2", "#c8ccd0", "#eaecee"] },
+      "pencil": { "role": "neutral", "displayName": "Pencil", "canonical": "#a3a8ad", "tonalRamp": ["#22252a", "#383c41", "#53585d", "#70767b", "#8d9398", "#a3a8ad", "#c9cdd0", "#eceef0"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#d6d8db", "tonalRamp": ["#232527", "#3a3c3f", "#56595c", "#75787b", "#96999c", "#b7babd", "#d6d8db", "#f0f1f2"] },
+      "fill": { "role": "neutral", "displayName": "Fill Tone", "canonical": "#e9e9e3", "tonalRamp": ["#25251f", "#3d3d36", "#595951", "#78786f", "#98988f", "#babab3", "#e9e9e3", "#f6f6f2"] },
+      "signal": { "role": "secondary", "displayName": "Signal Orange", "canonical": "#ff5b14", "tonalRamp": ["#3d1300", "#5f1f02", "#8a2e04", "#b23a06", "#e04c0c", "#ff5b14", "#ffa57e", "#fff1e9"] },
+      "signal-ink": { "role": "secondary", "displayName": "Burnt Signal Ink", "canonical": "#b23a06", "tonalRamp": ["#3d1300", "#5f1f02", "#8a2e04", "#b23a06", "#e04c0c", "#ff7a3f", "#ffc2a6", "#fff1e9"] },
+      "signal-wash": { "role": "secondary", "displayName": "Signal Wash", "canonical": "#fff1e9", "tonalRamp": ["#3d1300", "#5f1f02", "#8a2e04", "#b23a06", "#e04c0c", "#ff7a3f", "#ffc2a6", "#fff1e9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The single 'Tage versorgt' figure on the Übersicht; one per screen at most." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles (h1), balanced wrap." },
+      "title": { "displayName": "Title", "purpose": "Section titles sitting on a 2px ink rule; fieldset legends." },
+      "body": { "displayName": "Body", "purpose": "Prose and table cells; ledes at 17px graphite, max 68ch." },
+      "label": { "displayName": "Label (condensed)", "purpose": "Lettering on the drawing: field labels, navigation, buttons, board and slot labels, column heads." },
+      "caption": { "displayName": "Caption (condensed)", "purpose": "Title-block field names, scale numbers, legend, colophon, meta lines." },
+      "mono": { "displayName": "Mono", "purpose": "Code blocks in settings only." }
+    },
+    "hatch": [
+      { "name": "hatch-stock", "value": "repeating-linear-gradient(-45deg, var(--ink) 0 1.2px, transparent 1.2px 5px)", "purpose": "Stocked fill and cut shelf boards (CSS); SVG equivalent is pattern #hatch, 4px pitch, 1.6px stroke, rotated 45deg." },
+      { "name": "hatch-expired", "value": "SVG pattern #hatch-signal, signal stroke 1.6px", "purpose": "Fill of expired packages only." },
+      { "name": "hatch-warn-window", "value": "repeating-linear-gradient(-45deg, var(--rule) 0 1px, transparent 1px 5px)", "purpose": "MHD warning window on timelines." },
+      { "name": "drafting-grid", "value": "16px grid of 1px var(--rule) lines on white", "purpose": "Figure stage and login drawing panel." }
+    ],
+    "lineWeights": [
+      { "name": "frame", "value": "2px solid ink", "purpose": "Sheet frame, zone rules, control borders, section-head rules." },
+      { "name": "silhouette", "value": "1.6px ink, non-scaling, square caps", "purpose": "Package outlines." },
+      { "name": "subdivision", "value": "1px ink", "purpose": "Title-block cells, key-value dividers, leaders, package detail lines." },
+      { "name": "hairline", "value": "1px var(--rule)", "purpose": "Row dividers in tables and lists." },
+      { "name": "planned", "value": "dashed ink-2, 3 2.5", "purpose": "Missing (planned) packages; dashed ink for the Soll line." }
+    ],
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "All drawn gestures and hover slides." },
+      { "name": "fill-up", "value": "1100ms ease, delay 120ms + 70ms per slot", "purpose": "Hatch rises into package outlines once on Übersicht load; newly stocked item 1600ms after 500ms. Disabled under reduced motion." },
+      { "name": "draw-x", "value": "900ms ease, 80ms delay", "purpose": "Dimension lines draw out once on Übersicht load." },
+      { "name": "state", "value": "150ms background-color/color", "purpose": "Hover on buttons, callouts, title-block action." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "1120px" },
+      { "name": "mobile", "value": "760px" },
+      { "name": "narrow", "value": "420px" }
+    ],
+    "openDecisions": [
+      { "name": "board-width", "body": "Contract asked for board width proportional to target share; the build draws one symbol per target package, grouped above 18 symbols. Pending user confirmation; not a rule." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Default drawn-box control: 2px ink outline on paper.",
+      "html": "<button class=\"ds-btn\">Abbrechen</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 16px; border: 2px solid var(--ink, #151515); border-radius: 0; background: var(--paper, #fcfcfa); color: var(--ink, #151515); font: 600 15px/1 \"Barlow Semi Condensed\", Barlow, system-ui, sans-serif; cursor: pointer; transition: background-color .15s, color .15s; } .ds-btn:hover { background: var(--fill, #e9e9e3); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: 3px; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid ink action, e.g. Einlagern.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\"><path d=\"M12 5v14M5 12h14\"/></svg><span>Einlagern</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 16px; border: 2px solid var(--ink, #151515); border-radius: 0; background: var(--ink, #151515); color: var(--paper, #fcfcfa); font: 600 15px/1 \"Barlow Semi Condensed\", Barlow, system-ui, sans-serif; cursor: pointer; transition: background-color .15s; } .ds-btn-primary:hover { background: #333331; } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Borderless underlined action for secondary commands.",
+      "html": "<button class=\"ds-btn-quiet\">Löschen</button>",
+      "css": ".ds-btn-quiet { min-height: 42px; padding: 0 16px; border: 2px solid transparent; border-radius: 0; background: transparent; color: var(--ink, #151515); font: 600 15px/1 \"Barlow Semi Condensed\", Barlow, system-ui, sans-serif; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; } .ds-btn-quiet:hover { background: var(--fill, #e9e9e3); border-color: var(--fill, #e9e9e3); } .ds-btn-quiet:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled input: condensed graphite label over a 2px ink box on white.",
+      "html": "<label class=\"ds-field\"><span>Lagerort <em>optional</em></span><input class=\"ds-input\" value=\"Keller\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; } .ds-field > span { font: 600 14px/1.25 \"Barlow Semi Condensed\", Barlow, sans-serif; color: var(--ink-2, #4f555c); } .ds-field em { font-style: normal; font-weight: 500; opacity: .8; } .ds-input { width: 100%; min-height: 44px; padding: 8px 10px; border: 2px solid var(--ink, #151515); border-radius: 0; background: var(--white, #fff); color: var(--ink, #151515); font: 400 16px/1.2 Barlow, system-ui, sans-serif; } .ds-input:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Quick preset (MHD +3 Mon., +1 Jahr); selected inverts to ink.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\">+3 Mon.</button><button class=\"ds-chip ds-chip-on\">+1 Jahr</button><button class=\"ds-chip\">ohne MHD</button></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 6px; } .ds-chip { min-height: 32px; padding: 0 10px; border: 1px solid var(--ink, #151515); border-radius: 0; background: var(--paper, #fcfcfa); color: var(--ink, #151515); font: 500 14px/1 \"Barlow Semi Condensed\", Barlow, sans-serif; cursor: pointer; } .ds-chip:hover { background: var(--fill, #e9e9e3); } .ds-chip-on, .ds-chip-on:hover { background: var(--ink, #151515); color: var(--paper, #fcfcfa); } .ds-chip:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Masthead links with ink underbar for current; MHD count badge in signal.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Übersicht</a><a href=\"#\">Vorrat</a><a href=\"#\">Haltbarkeit <span class=\"ds-badge\">4</span></a><a href=\"#\">Planung</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: stretch; min-height: 56px; border-bottom: 2px solid var(--ink, #151515); background: var(--paper, #fcfcfa); } .ds-nav a { display: flex; align-items: center; gap: 6px; padding: 0 12px; font: 600 16px/1 \"Barlow Semi Condensed\", Barlow, sans-serif; color: var(--ink-2, #4f555c); text-decoration: none; transition: box-shadow .2s cubic-bezier(.16,1,.3,1), color .2s; } .ds-nav a:hover { color: var(--ink, #151515); box-shadow: inset 0 -2px 0 var(--ink, #151515); } .ds-nav a[aria-current=page] { color: var(--ink, #151515); box-shadow: inset 0 -4px 0 var(--ink, #151515); } .ds-nav a:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: -4px; } .ds-badge { display: inline-grid; place-content: center; min-width: 20px; height: 20px; padding: 0 5px; background: var(--signal, #ff5b14); color: var(--ink, #151515); font: 700 12px/1 \"Barlow Semi Condensed\", sans-serif; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Callout",
+      "kind": "custom",
+      "refersTo": "callout",
+      "description": "Numbered circle binding drawing to parts list; inverts on hover, signal when expired.",
+      "html": "<span class=\"ds-callout\">7</span> <span class=\"ds-callout ds-callout-lit\">8</span> <span class=\"ds-callout ds-callout-alert\">15</span>",
+      "css": ".ds-callout { display: inline-grid; place-content: center; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ink, #151515); background: var(--paper, #fcfcfa); color: var(--ink, #151515); font: 700 13px/1 \"Barlow Semi Condensed\", sans-serif; font-variant-numeric: tabular-nums; transition: background-color .15s, color .15s; } .ds-callout:hover, .ds-callout-lit { background: var(--ink, #151515); color: var(--paper, #fcfcfa); } .ds-callout-alert { background: var(--signal, #ff5b14); }"
+    },
+    {
+      "name": "Shelf Slot",
+      "kind": "custom",
+      "refersTo": "slot",
+      "description": "Callout with leader over drawn packages on a hatched cut board: stocked hatched, missing dashed.",
+      "html": "<a href=\"#\" class=\"ds-slot\"><span class=\"ds-callout\">2</span><svg width=\"84\" height=\"36\" viewBox=\"-1.5 -1.5 84 36\" fill=\"none\"><defs><pattern id=\"ds-h\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><path d=\"M0 0V4\" stroke=\"#151515\" stroke-width=\"1.6\"/></pattern></defs><path d=\"M1 3H21V29H1Z\" fill=\"url(#ds-h)\" stroke=\"#151515\" stroke-width=\"1.6\"/><path d=\"M26 3H46V29H26Z\" fill=\"url(#ds-h)\" stroke=\"#151515\" stroke-width=\"1.6\"/><path d=\"M51 3H71V29H51Z\" stroke=\"#4f555c\" stroke-width=\"1.6\" stroke-dasharray=\"3 2.5\"/></svg><span class=\"ds-board\"></span><span class=\"ds-slot-name\">Nudeln</span><span class=\"ds-slot-fill\">2 / 3</span></a>",
+      "css": ".ds-slot { display: grid; justify-items: center; width: 140px; color: var(--ink, #151515); text-decoration: none; } .ds-slot .ds-callout { display: inline-grid; place-content: center; width: 26px; height: 26px; border-radius: 50%; border: 2px solid #151515; background: #fcfcfa; font: 700 13px/1 \"Barlow Semi Condensed\", sans-serif; margin-bottom: 9px; transition: background-color .15s, color .15s; } .ds-board { width: 100%; height: 12px; border-block: 2px solid #151515; background: repeating-linear-gradient(-45deg, #151515 0 1.2px, transparent 1.2px 5px); } .ds-slot-name { font: 600 13.5px/1.15 \"Barlow Semi Condensed\", sans-serif; padding-top: 8px; } .ds-slot-fill { font: 500 13px/1.2 \"Barlow Semi Condensed\", sans-serif; color: #4f555c; } .ds-slot:hover .ds-slot-name { text-decoration: underline; text-underline-offset: 3px; } .ds-slot:hover .ds-callout { background: #151515; color: #fcfcfa; } .ds-slot:focus-visible { outline: 2px dashed #151515; outline-offset: -2px; }"
+    },
+    {
+      "name": "Title Block Action",
+      "kind": "custom",
+      "refersTo": "titleblock-action",
+      "description": "Full-width ink cell closing the Schriftfeld; the one-tap Einlagern entry.",
+      "html": "<a href=\"#\" class=\"ds-tb-action\"><span class=\"ds-tb-label\">Aktion</span><span class=\"ds-tb-value\">Einlagern <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-tb-action { display: grid; gap: 6px; padding: 10px 14px 12px; min-height: 64px; background: var(--ink, #151515); color: var(--paper, #fcfcfa); text-decoration: none; transition: background-color .15s; } .ds-tb-label { font: 500 12px/1 \"Barlow Semi Condensed\", sans-serif; color: #c9ccce; } .ds-tb-value { display: flex; align-items: center; justify-content: space-between; font: 700 22px/1.2 Barlow, sans-serif; } .ds-tb-value svg { transition: transform .25s cubic-bezier(.16,1,.3,1); } .ds-tb-action:hover { background: #2f2f2d; } .ds-tb-action:hover svg { transform: translateX(4px); } .ds-tb-action:focus-visible { outline: 2px dashed var(--ink, #151515); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Regalplan (Montagezeichnung)",
+    "overview": "The supply is drawn, not charted. Every screen is a sheet from a furniture assembly drawing: a double-ruled sheet frame, a title block (Schriftfeld), the cellar shelf in front elevation with one board per food group, numbered circular callouts bound to a parts list (Stückliste), and dimension lines that measure \"Tage versorgt\". Packages are line drawings; how full the shelf is reads from line form and hatching, not from bars, cards or traffic lights.\n\nThe world is monochrome ink on white paper. A pencil grey carries construction lines and missing items, a pale fill tone marks hover and selection, and a single signal orange is held back for best-before (MHD) attention. Density is that of a technical drawing: compact condensed labels, tabular figures, hairline rules between rows, 2px rules between zones. Calm, exact and quietly complete, never alarmist.\n\nThe world explicitly refuses the KPI-card dashboard: no progress bars, no traffic-light badges, no rounded pills, no drop shadows.",
+    "keyCharacteristics": [
+      "Ink on paper, one held-back signal accent.",
+      "State is line form: hatched solid = stocked, dashed = planned/missing, doubled outline = bald fällig, struck through in signal = abgelaufen.",
+      "Numbered circular callouts link the drawing to the parts list; hovering either lights both.",
+      "Square corners and square line caps everywhere; the circle belongs to callouts alone.",
+      "Condensed grotesk for labels and figures, tabular numerals in every quantity."
+    ],
+    "rules": [
+      { "name": "The Held-Back Signal Rule", "body": "Signal orange means \"look at this MHD\" and nothing else. It never decorates, never marks navigation or primary actions, and never appears without a text state (\"fällig\", \"abgelaufen\") beside it.", "section": "colors" },
+      { "name": "The Never Colour Alone Rule", "body": "Every state carried by colour is also carried by line form or text: doubled outline plus \"bald fällig\", strike line plus \"abgelaufen\", double underline for \"bald fällig\" in tables.", "section": "colors" },
+      { "name": "The Tabular Figure Rule", "body": "Every quantity, date, callout number and badge uses tabular lining numerals so columns and dimension values align like a parts list.", "section": "typography" },
+      { "name": "The Lettering Rule", "body": "Labels on the drawing (boards, slots, legends, title-block fields, controls) are set in the condensed face; continuous reading text is set in the regular face. Labels stay sentence case; no tracked uppercase.", "section": "typography" },
+      { "name": "The Drafted Depth Rule", "body": "If something needs to stand apart, give it a heavier rule, a hatch or an ink fill. Never a shadow, blur or gradient lift.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do draw state as line form first (hatch, dash, double outline, strike) and add signal orange only for MHD attention.",
+      "Do separate zones with 2px ink rules and rows with 1px hairlines instead of cards, gaps or shadows.",
+      "Do number anything drawn with a circular callout and give it a matching parts-list row; hovering one lights the other.",
+      "Do use tabular figures for every quantity, date and number.",
+      "Do mark focus with the 2px dashed ink outline.",
+      "Do draw icons inline as SVG strokes at 2px with square caps and mitred joins.",
+      "Do keep motion to one-time drawing gestures (hatch filling, lines drawing out) and respect reduced motion."
+    ],
+    "donts": [
+      "Don't use progress bars, KPI cards or traffic-light badges to show stock.",
+      "Don't round controls or containers; the circle is reserved for callouts.",
+      "Don't add drop shadows, blurs or gradient lifts.",
+      "Don't use signal orange for navigation, primary actions or decoration.",
+      "Don't communicate any state by colour alone.",
+      "Don't load fonts from a CDN; the faces are self-hosted."
+    ]
+  }
+}
