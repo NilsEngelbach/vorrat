@@ -1,3 +1,8 @@
+# Der Ordner darüber sperrt alles (../.htaccess); hier ist es wieder erlaubt.
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+
 # Apache: alle Anfragen ohne passende Datei an index.php
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f

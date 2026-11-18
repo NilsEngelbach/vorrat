@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Plain PHP 8.2 + PDO + MySQL 8, no Composer, no build step (user's choice). Front controller in `public/`; app code outside the webroot. Local dev runs on a "Local" site (nginx + PHP-FPM, WordPress-style `try_files` routing to `index.php`, Mailpit for mail). Production target: any ordinary PHP host with MySQL and cron.
+Plain PHP 8.2 + PDO + MySQL 8, no Composer, no build step (user's choice). Front controller in `public/`; app code outside the webroot. Runs under Apache (`public/.htaccess`), nginx (`try_files` to `index.php`) or `php -S` for development. Production target: any ordinary PHP host with MySQL and cron.
 
 ## Users
 

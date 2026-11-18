@@ -4,8 +4,8 @@ return [
     'db' => [
         'host' => '127.0.0.1',
         'port' => 3306,
-        'name' => 'notvorrat',
-        'user' => 'notvorrat',
+        'name' => '',
+        'user' => '',
         'pass' => '',
     ],
     // Optional. Die Adresse ergibt sich sonst aus dem Browseraufruf; nur nötig, wenn der

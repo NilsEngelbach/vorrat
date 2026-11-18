@@ -1,4 +1,25 @@
+# The server's and this machine's settings (template: config.sample.php)
 /config.php
+/config.*.php
+!/config.sample.php
+
+# Machine and hosting details stay local (public repository): deploy script, its settings,
+# notes on the local site and the live server
+/private/
+.env
+.env.*
+
+# Written by each deploy: which commit is live
+/public/version.txt
+
+# Local browser automation and impeccable session artifacts
+/.playwright-mcp/
 /.impeccable/review/
 /.impeccable/live/
-/.playwright-mcp/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
